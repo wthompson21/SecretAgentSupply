@@ -75,6 +75,10 @@ nav ul {
   color: white;
 }
 
+.mobileNav {
+  display: none;
+}
+
 .products {
   display: flex;
   justify-content: space-between;
@@ -83,6 +87,7 @@ nav ul {
 
 .product {
   width: 30%;
+  flex: 0 1 auto;
 }
 
 .productImg {
@@ -116,6 +121,7 @@ nav ul {
 
 .info {
   width: 35%;
+  flex: 0 1 auto;
 }
 
 .title {
@@ -126,10 +132,79 @@ nav ul {
 }
 
 footer {
-  display: flex;
-  align-items: center;
+  display: block;
   margin: 4rem 0 0 0;
-  height: 10rem;
+  padding: 5rem 0;
   background-color: black;
   color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 924px;
+  }
+  .heroTitle h2 {
+    font-size: 1.8rem;
+  }
+  .nav {
+    display: none;
+  }
+  .mobileNav {
+    display: block;
+    text-align: center;
+    color: white;
+  }
+  .glasses {
+    display: none;
+  }
+  .product {
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .container {
+    width: 470px;
+  }
+  .hero {
+    height: 15rem;
+  }
+  .heroTitle {
+    width: 83%;
+    padding: 1rem 2rem;
+    margin-top: 8rem;
+  }
+  .heroTitle h4 {
+    font-size: 0.77rem;
+    margin-top: 1rem;
+  }
+  .heroTitle h2 {
+    font-size: 1rem;
+  }
+  .logo {
+    justify-content: center;
+  }
+  .logo span {
+    display: none;
+  }
+  .watch {
+    display: none;
+  }
+  .products {
+    justify-content: center;
+  }
+  .product {
+    width: 90%;
+  }
+  .businessInfo {
+    flex-direction: column;
+  }
+  .info {
+    width: 90%;
+    padding-bottom: 1rem;
+  }
+  footer {
+    text-align: center;
+    padding: 3rem 0;
+  }
 }
